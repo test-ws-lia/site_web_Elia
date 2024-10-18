@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elia Papillon</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+        header {
+            background-color: #45503b;
+            color: white;
+            padding: 10px 20px;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'League Spartan', sans-serif;
+            font-size: 24px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .active {
+            font-weight: bold;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Elia Papillon</div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="#">Formules</a></li>
+                    <li><a href="#">Mariages</a></li>
+                    <li><a href="#">Entreprises</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Qui suis-je</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#">Menu</a>
+                        <div class="dropdown-content">
+                            <a href="#">Portrait</a>
+                            <a href="#">Fantasy</a>
+                            <a href="#">Grossesse</a>
+                            <a href="#">Couple</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>
