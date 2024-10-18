@@ -29,34 +29,36 @@
         .logo {
             font-family: 'League Spartan', sans-serif;
             font-weight: 600;
-            font-size: 24px;
+            font-size: 36px;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
             display: flex;
+            align-items: center;
         }
         nav ul li {
-            margin-right: 15px;
+            margin-left: 20px;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-size: 14px;
         }
         .active {
             font-weight: bold;
         }
         .dropdown {
             position: relative;
-            display: inline-block;
         }
         .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #f9f9f9;
+            background-color: white;
             min-width: 160px;
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 1;
+            right: 0;
         }
         .dropdown:hover .dropdown-content {
             display: block;
@@ -66,6 +68,14 @@
             padding: 12px 16px;
             text-decoration: none;
             display: block;
+            text-align: left;
+        }
+        .menu-button {
+            background-color: #45503b;
+            color: white;
+            border: 1px solid white;
+            padding: 5px 10px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -77,7 +87,7 @@
                 <ul>
                     <li><a href="#" class="active">Accueil</a></li>
                     <li class="dropdown">
-                        <a href="#">Formules</a>
+                        <button class="menu-button">Formules</button>
                         <div class="dropdown-content">
                             <a href="#">Portrait</a>
                             <a href="#">Fantasy</a>
