@@ -17,24 +17,28 @@
             font-family: 'Open Sans', sans-serif;
         }
         header {
-            background-color: #45503b;
-            color: white;
-            padding: 10px 20px;
-        }
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background-color: white;
+            color: #45503b;
+            padding: 20px 0;
+            text-align: center;
         }
         .logo {
             font-family: 'League Spartan', sans-serif;
             font-weight: 600;
-            font-size: 36px;
+            font-size: 48px;
+            color: #45503b;
+            margin-bottom: 20px;
+        }
+        nav {
+            background-color: #45503b;
+            padding: 10px 0;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
+            margin: 0;
             display: flex;
+            justify-content: flex-end;
             align-items: center;
         }
         nav ul li {
@@ -64,7 +68,7 @@
             display: block;
         }
         .dropdown-content a {
-            color: black;
+            color: #45503b;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
@@ -81,28 +85,26 @@
 </head>
 <body>
     <header>
-        <div class="header-container">
-            <div class="logo">Elia Papillon</div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">Accueil</a></li>
-                    <li class="dropdown">
-                        <a href="#">Formules</a>
-                        <div class="dropdown-content">
-                            <a href="#">Portrait</a>
-                            <a href="#">Fantasy</a>
-                            <a href="#">Grossesse</a>
-                            <a href="#">Couple</a>
-                    <li><a href="#">Mariages</a></li>
-                    <li><a href="#">Entreprises</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Qui suis-je</a></li>
-                    <li><a href="#">Contact</a></li>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <div class="logo">Elia Papillon</div>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#" class="active">Accueil</a></li>
+            <li class="dropdown">
+                <a href="#">Formules</a>
+                <div class="dropdown-content">
+                    <a href="#">Portrait</a>
+                    <a href="#">Fantasy</a>
+                    <a href="#">Grossesse</a>
+                    <a href="#">Couple</a>
+            <li><a href="#">Mariages</a></li>
+            <li><a href="#">Entreprises</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Qui suis-je</a></li>
+            <li><a href="#">Contact</a></li>
+                </div>
+            </li>
+        </ul>
+    </nav>
 </body>
 </html>
