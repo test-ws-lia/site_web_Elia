@@ -107,14 +107,20 @@ nav ul li a {
     bottom: 20px;
     left: 20px;
     right: 20px;
-    color: #D5FF86; /* Couleur vert clair comme dans l'image */
+    color: #D5FF86;
     font-size: 3em;
     font-weight: normal;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    font-family: 'TY', sans-serif;
-    white-space: nowrap; /* Prevents text from wrapping */
-    overflow: hidden; /* Hides any overflow */
-    text-overflow: ellipsis; /* Adds an ellipsis if the text overflows */
+    font-family: 'TY', serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+    /* Nouvelles propriétés */
+    width: calc(100% - 40px);
+    text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .about {
