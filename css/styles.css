@@ -106,11 +106,15 @@ nav ul li a {
     position: absolute;
     bottom: 20px;
     left: 20px;
+    right: 20px;
     color: #D5FF86; /* Couleur vert clair comme dans l'image */
     font-size: 3em;
     font-weight: normal;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    font-family: 'League Spartan', sans-serif;
+    font-family: 'TY', sans-serif;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides any overflow */
+    text-overflow: ellipsis; /* Adds an ellipsis if the text overflows */
 }
 
 .about {
