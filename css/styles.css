@@ -106,7 +106,7 @@ nav ul li a {
 
 .hero h2 {
     position: absolute;
-    bottom: 1px;
+    bottom: 60px;
     left: 0;
     right: 0;
     color: #D5FF86;
@@ -119,6 +119,7 @@ nav ul li a {
     box-sizing: border-box;
     text-align: center;
     font-size: 16px;
+    margin: 0;
     
 }
 
