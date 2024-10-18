@@ -1,15 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elia Papillon - Photographe professionnelle</title>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #45503b;
+            color: #d5f2c9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .content {
+            flex: 1;
+            padding-right: 40px;
+        }
+        h1 {
+            font-size: 48px;
+            color: #d5f2c9;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .image-container {
+            flex: 0 0 300px;
+        }
+        .profile-image {
+            width: 100%;
+            height: auto;
+            border-radius: 50% 50% 0 50%;
+            object-fit: cover;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #61826b;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
     <div id="header-placeholder"></div>
     <script>
         fetch('includes/header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header-placeholder').innerHTML = data;
-            }) ;
+            });
     </script>
-</head>
-<body>
+
+<div class="container">
+    <div class="content">
+        <h1>Enchantée, je suis Elia</h1>
+        <p>Photographe professionnelle depuis 3 ans, j'accompagne vos projets visuels de manière douce et poétique. Passionnée de photographie créative, mon imagination me guide sur chaque séance photo pour vous proposer des résultats uniques et personnels.</p>
+        <p>Je ne vois pas seulement les photos comme des souvenirs, mais aussi comme des créations à part entière. C'est pourquoi j'accorde une attention particulière à la post production pour finaliser vos images jusqu'aux derniers détails.</p>
+        <a href="qui-suis-je.html" class="cta-button">Faisons connaissance</a>
+    </div>
+    <div class="image-container">
+        <img src="./images/Quadrillage/DSC01240.jpg" alt="Elia Papillon" class="profile-image">
+    </div>
+</div>
 </body>
 </html>
