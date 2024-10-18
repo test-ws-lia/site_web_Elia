@@ -8,10 +8,10 @@
 
 @font-face {
     font-family: 'TY';
-    src: url('../fonts/TY/TYSerif-D.woff') format('woff');
     src: url('../fonts/TY/TYSerif-D.woff2') format('woff2');
+    src: url('../fonts/TY/TYSerif-D.woff') format('woff');
     src: url('../fonts/TY/TYSerif-D.ttf') format('truetype');
-    font-weight: 600;
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
