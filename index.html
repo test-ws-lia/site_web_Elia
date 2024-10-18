@@ -37,7 +37,7 @@
                 <source src="images/video/Test .mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la vidéo HTML5.
             </video>
-            <h2>Photographe créative et poétique</h2>
+            <h2>Photographe créatives et poétique</h2>
         </section>
 
         <section id="about" class="about">
@@ -80,23 +80,41 @@
     </footer>
 
     <script>
-        function adjustTextWidth() {
+        function adjustTextSize() {
             const heroText = document.querySelector('.hero h2');
             const container = heroText.parentElement;
             
-            // Réinitialiser la transformation
-            heroText.style.transform = 'scaleX(1)';
-            
-            // Calculer le ratio d'échelle nécessaire
-            const ratio = container.offsetWidth / heroText.offsetWidth;
-            
-            // Appliquer la transformation
-            heroText.style.transform = `scaleX(${ratio})`;
+            // Fonction pour vérifier si le texte déborde
+            function isOverflowing(element) {
+                return element.scrollWidth > element.clientWidth;
+            }
+        
+            // Commencez avec une grande taille de police
+            let fontSize = 100;
+            heroText.style.fontSize = `${fontSize}px`;
+        
+            // Réduisez progressivement la taille jusqu'à ce qu'il n'y ait plus de débordement
+            while (isOverflowing(heroText) && fontSize > 10) {
+                fontSize--;
+                heroText.style.fontSize = `${fontSize}px`;
+            }
+        
+            // Vérifiez si le texte occupe moins de 95% de la largeur
+            if (heroText.scrollWidth < container.clientWidth * 0.95) {
+                // Augmentez progressivement la taille jusqu'à ce qu'il occupe presque toute la largeur
+                while (!isOverflowing(heroText) && heroText.scrollWidth < container.clientWidth * 0.98) {
+                    fontSize++;
+                    heroText.style.fontSize = `${fontSize}px`;
+                }
+                // Reculez d'un pas pour éviter le débordement
+                fontSize--;
+                heroText.style.fontSize = `${fontSize}px`;
+            }
         }
         
         // Exécuter la fonction au chargement et au redimensionnement
-        window.addEventListener('load', adjustTextWidth);
-        window.addEventListener('resize', adjustTextWidth);
+        window.addEventListener('load', adjustTextSize);
+        window.addEventListener('resize', adjustTextSize);
         </script>
 
 </body>

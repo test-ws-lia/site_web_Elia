@@ -112,21 +112,13 @@ nav ul li a {
     color: #D5FF86;
     font-weight: normal;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    font-family: 'League Spartan', sans-serif;
+    font-family: 'TY', sans-serif;
     white-space: nowrap;
     overflow: hidden;
     padding: 0 20px;
     box-sizing: border-box;
+    text-align: center;
     
-    /* Nouvelles propriétés pour étirer le texte */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    /* Ajustement dynamique de la taille du texte */
-    font-size: 10vw; /* Taille de base */
-    transform-origin: left center;
-    transform: scaleX(1); /* Sera ajusté par JavaScript */
 }
 
 .about {
