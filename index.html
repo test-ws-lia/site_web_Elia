@@ -3,32 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elia Papillon - Accueil</title>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .content {
-            padding: 20px;
-        }
-    </style>
+    <title>Elia Papillon</title>
 </head>
 <body>
     <div id="header-placeholder"></div>
-
-    <div class="content">
-        <h1>Bienvenue chez Elia Papillon</h1>
-        <p>Découvrez mes services de photographie pour vos événements spéciaux.</p>
-        <!-- Ajoutez ici le contenu principal de votre page d'accueil -->
-    </div>
-
-    <script src="js/include-html.js"></script>
     <script>
-        includeHTML('header-placeholder', 'includes/header.html');
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
     </script>
 </body>
 </html>
