@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #45503B;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.nav-link {
+    color: #45503B;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-color: #45503B;
+    color: #D5FF86;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.video-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #000000;
+}
+
+.video-placeholder {
+    padding-top: 56.25%;
+    position: relative;
+}
+
+.video-placeholder::after {
+    content: "Vidéo";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+}
+
+.about {
+    background-color: #45503B;
+    color: #FFFFFF;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.cta-button {
+    background-color: #61826B;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.testimonials {
+    background-color: #DBD9DB;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    color: #0C370F;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.testimonial cite {
+    font-weight: bold;
+}
+
+.auvergne {
+    background-color: #0C370F;
+    color: #D5FF86;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.auvergne h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.auvergne p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.instagram {
+    background-color: #B098A4;
+    color: #D5FF86;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.instagram h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.instagram p {
+    margin-bottom: 30px;
+}
+
+.instagram-accounts {
+    display: flex;
+    justify-content: space-around;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.insta-handle {
+    background-color: #DBD9DB;
+    color: #45503B;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #45503B;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+.footer-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 10px;
+}
