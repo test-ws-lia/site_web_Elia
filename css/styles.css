@@ -108,7 +108,7 @@ nav ul li a {
     left: 20px;
     right: 20px;
     color: #D5FF86;
-    font-size: 3em;
+    font-size: calc(1.5em + 2vw);
     font-weight: normal;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     font-family: 'TY', serif;
