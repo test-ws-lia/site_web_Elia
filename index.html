@@ -37,7 +37,7 @@
                 <source src="images/video/Test .mp4" type="video/mp4">
                 Votre navigateur ne supporte pas la vidéo HTML5.
             </video>
-            <h2>Photographe créatives et poétique</h2>
+            <h2>Photographe créative et poétique</h2>
         </section>
 
         <section id="about" class="about">
@@ -85,37 +85,43 @@
             const container = heroText.parentElement;
             
             // Fonction pour vérifier si le texte déborde
-            function isOverflowing(element) {
-                return element.scrollWidth > element.clientWidth;
-            }
-        
-            // Commencez avec une grande taille de police
-            let fontSize = 100;
-            heroText.style.fontSize = `${fontSize}px`;
-        
-            // Réduisez progressivement la taille jusqu'à ce qu'il n'y ait plus de débordement
-            while (isOverflowing(heroText) && fontSize > 10) {
-                fontSize--;
-                heroText.style.fontSize = `${fontSize}px`;
-            }
-        
-            // Vérifiez si le texte occupe moins de 95% de la largeur
-            if (heroText.scrollWidth < container.clientWidth * 0.95) {
-                // Augmentez progressivement la taille jusqu'à ce qu'il occupe presque toute la largeur
-                while (!isOverflowing(heroText) && heroText.scrollWidth < container.clientWidth * 0.98) {
-                    fontSize++;
-                    heroText.style.fontSize = `${fontSize}px`;
+            const isOverflowing = element => element.scrollWidth > element.clientWidth;
+            
+            // Fonction pour ajuster la taille de la police
+            const setFontSize = size => heroText.style.fontSize = `${size}px`;
+            
+            // Recherche dichotomique pour trouver la taille de police optimale
+            let minSize = 10;
+            let maxSize = 100;
+            let currentSize;
+            
+            while (maxSize - minSize > 1) {
+                currentSize = Math.floor((minSize + maxSize) / 2);
+                setFontSize(currentSize);
+                
+                if (isOverflowing(heroText)) {
+                    maxSize = currentSize;
+                } else {
+                    minSize = currentSize;
                 }
-                // Reculez d'un pas pour éviter le débordement
-                fontSize--;
-                heroText.style.fontSize = `${fontSize}px`;
+            }
+            
+            // Ajustement final pour occuper 95-98% de la largeur
+            while (heroText.scrollWidth < container.clientWidth * 0.95 && !isOverflowing(heroText)) {
+                currentSize++;
+                setFontSize(currentSize);
+            }
+            
+            // Reculer d'un pas si nécessaire
+            if (isOverflowing(heroText)) {
+                setFontSize(--currentSize);
             }
         }
         
         // Exécuter la fonction au chargement et au redimensionnement
         window.addEventListener('load', adjustTextSize);
         window.addEventListener('resize', adjustTextSize);
-        </script>
+    </script>
 
 </body>
 </html>
