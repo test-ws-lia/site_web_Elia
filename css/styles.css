@@ -105,21 +105,28 @@ nav ul li a {
 }
 
 .hero h2 {
-    position: relative; /* Changé de absolute à relative */
-    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
     color: #D5FF86;
     font-weight: normal;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    font-family: 'TY', sans-serif;
-    white-space: nowrap; /* Empêche le retour à la ligne */
-    overflow: hidden; /* Cache le débordement */
-    padding: 0 20px; /* Ajoute un peu d'espace sur les côtés */
-    box-sizing: border-box; /* Inclut le padding dans la largeur */
-    margin-bottom: 20px; /* Espace en bas */
-
-    /* Ajustement automatique de la taille du texte */
-    font-size: 10vw; /* Taille de base, ajustez selon vos besoins */
-    text-align: center; /* Centre le texte */
+    font-family: 'League Spartan', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 20px;
+    box-sizing: border-box;
+    
+    /* Nouvelles propriétés pour étirer le texte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Ajustement dynamique de la taille du texte */
+    font-size: 10vw; /* Taille de base */
+    transform-origin: left center;
+    transform: scaleX(1); /* Sera ajusté par JavaScript */
 }
 
 .about {
