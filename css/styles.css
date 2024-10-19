@@ -139,9 +139,10 @@ nav ul li a {
 
 .about h2 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 48px;
+    font-size: clamp(48px, 5vw + 1rem, 96px);
     color: #D5FF86;
     margin-bottom: 20px;
+    line-height: 1.2; /* Ajout pour un meilleur espacement */
 }
 
 .about p {
@@ -149,6 +150,7 @@ nav ul li a {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 15px;
+    margin-left: 2em;
 }
 
 .cta-button {
