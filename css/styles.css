@@ -127,29 +127,71 @@ nav ul li a {
     background-color: #45503B;
     color: #FFFFFF;
     padding: 50px 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .content {
+    flex: 1;
+    padding-right: 40px;
 }
 
 .about h2 {
-    font-size: 36px;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 48px;
+    color: #D5FF86;
     margin-bottom: 20px;
 }
 
 .about p {
-    max-width: 800px;
-    margin: 0 auto 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 .cta-button {
     background-color: #61826B;
     color: #FFFFFF;
+    border: none;
     padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.cta-button:hover {
+    background-color: #556E5F;
+}
+
+.image-container {
+    flex: 0 0 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about .content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .image-container {
+        flex: 0 0 200px;
+        height: 200px;
+    }
+}
 .testimonials {
     background-color: #DBD9DB;
     padding: 50px 20px;
